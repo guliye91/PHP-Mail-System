@@ -1,0 +1,99 @@
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background: green;
+    text-align: center;
+
+}
+.container{
+    width: 60rem;
+    height: 65rem;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+.img-container{
+    width: 30rem;
+    height: auto;
+    margin: auto;
+}
+.img-container img{
+    max-width: 100%;
+}
+.container h1{
+    padding: 2rem 0 0;
+}
+.container form p{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+}
+.container input[type=text]{
+    width: 25rem;
+    height: 3rem;
+    padding: 3px 5px;
+    border: 0;
+    outline: 0;
+    border-radius: 3px;
+    margin: 0 0 0 5px;
+    font-size: 1.6rem;
+}
+.container input[type=email]{
+    width: 25rem;
+    height: 3rem;
+    padding: 3px 5px;
+    border: 0;
+    outline: 0;
+    border-radius: 3px;
+    margin: 0 0 0 25px;
+    font-size: 1.6rem;
+}
+.submit-btn{
+    padding: .3rem 1rem;
+    font-size: 1.8rem;
+    border-radius: 3px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.copyright{
+    padding: 3rem 0 0;
+    font-size: 1.8rem;
+}
+@media screen and (max-width: 768px){
+    .container{
+        width: 50rem;
+        height: 55rem;
+        margin: 2rem auto;
+        padding: 1rem 2rem;
+        border: none;
+    }
+
+   
+}
+@media screen and (max-width: 576px){
+    .container h1{
+        padding: 1rem 0 0;
+        font-size: 2rem;
+    }
+    .container{
+        width: 40rem;
+        height: 55rem;
+        margin: 2rem auto;
+        padding: 1rem 1rem;
+    }
+    .submit-btn{
+        font-size: 2rem;
+        padding: 5px 20px;
+    }
+}
