@@ -13,6 +13,7 @@
 <body>
     <div class="container">
         <h1>STUDENT'S MAIL LIST</h1>
+        <hr>
         <div class="img-container">
             <img src="./images/logo.jpg" alt="university-logo">
         </div>
@@ -28,9 +29,15 @@
             <input type="submit" name="submit" value="Submit" class="submit-btn">
         </form>
         <div class="copyright">
-            <p>All Rights Reserved. &copy;Guliye</p>
+            <p>All Rights Reserved. &copy;Guliye <span style="color: #e25555;">&hearts;</span></p>
         </div>
     </div>
+    <script>
+        const img = document.querySelector('.container img');
+        img.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        })
+    </script>
 </body>
 
 </html>
