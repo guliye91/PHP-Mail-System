@@ -37,9 +37,6 @@
                 Either REG NO or Email exists!
               </div>';
                 }
-            } else {
-                header("Location: ../index.php");
-                exit();
             }
 
 
