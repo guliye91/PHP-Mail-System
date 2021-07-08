@@ -5,9 +5,13 @@ if (isset($_POST['submit'])) {
     $regNo = $_POST['reg-no'];
     $email = $_POST['mail'];
     $contain = 'I231' || 'i231';
+    $commonValue = strtoupper(substr($regNo, 0, 1));
 
     if (empty($regNo) || empty($email)) {
         header("Location: ../index.php?error=emptyfields");
+        exit();
+    } else if ($commonValue !== 'I') {
+        header("Location: ../index.php?error=invalidreg");
         exit();
     } else if (!str_contains($regNo, $contain)) {
         header("Location: ../index.php?error=invalidreg");

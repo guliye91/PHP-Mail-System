@@ -18,6 +18,32 @@
             <img src="./images/logo.jpg" alt="university-logo">
         </div>
         <form action="includes/email.inc.php" method="post">
+            <?php
+            if (isset($_GET['error'])) {
+                if ($_GET['error'] == 'emptyfields') {
+                    echo '<div class="alert alert-danger" role="alert">
+                Please Fill all the fields!
+              </div>';
+                } else if ($_GET['error'] == 'invalidreg') {
+                    echo '<div class="alert alert-danger" role="alert">
+                Invalid Registration Number!
+              </div>';
+                } else if ($_GET['error'] == 'invalidmail') {
+                    echo '<div class="alert alert-danger" role="alert">
+                Invalid Email Address!
+              </div>';
+                } else if ($_GET["error"] == 'regmailexists') {
+                    echo '<div class="alert alert-danger" role="alert">
+                Either REG NO or Email exists!
+              </div>';
+                }
+            } else {
+                header("Location: ../index.php");
+                exit();
+            }
+
+
+            ?>
             <label for="registration-number">
                 <p>REG NO: <input type="text" id="registration-number" name="reg-no" placeholder="Registration Number..."></p>
 
